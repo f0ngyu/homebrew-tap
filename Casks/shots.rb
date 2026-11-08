@@ -8,14 +8,13 @@ cask "shots" do
   homepage "https://github.com/f0ngyu/homebrew-tap"
 
   depends_on arch: :arm64
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Shots.app"
 
   # 应用是自签名、没有公证的，去掉隔离标记才能打开。
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/Shots.app"]
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/Shots.app"]
   end
 
   uninstall quit: "com.f0ngyu.shots"

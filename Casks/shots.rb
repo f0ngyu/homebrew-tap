@@ -1,6 +1,6 @@
 cask "shots" do
-  version "0.3.5"
-  sha256 "0569e9ac0bbbf11b3ec8d15ab9943c63995171d26ce696cd0fb46c7583a06d77"
+  version "0.4.0"
+  sha256 "bf8f80cf54fafe9d20b74f3d48907d511bb6224b31b29a65b55fcd3a66aae483"
 
   url "https://github.com/f0ngyu/homebrew-tap/releases/download/v#{version}/shots-#{version}-arm64.dmg"
   name "Shots"
